@@ -252,7 +252,7 @@ body.scroll {
 }
 @media (max-width: 1260px) {
   .header-title {
-    font-size: calc(30px + 35 * (100vw - 320px) / 940);
+    font-size: calc(38px + 27 * (100vw - 320px) / 940);
   }
 }
 @media screen and (max-width: 1270px) {
@@ -327,6 +327,7 @@ body.scroll {
 @media screen and (max-width: 1275px) {
   .service-card {
     padding-top: 50px;
+    justify-content: start;
   }
 }
 .service-card_title {
@@ -362,6 +363,7 @@ body.scroll {
   .service-title {
     width: 100%;
     text-align: center;
+    font-size: 37px;
   }
 }
 .service-card_subtitle {
@@ -394,6 +396,88 @@ body.scroll {
 }
 .service-link:hover {
   background-color: #d5dddd;
+}
+@media screen and (max-width: 620px) {
+  .service-link {
+    display: none;
+  }
+}
+
+.projects-img {
+  width: 100%;
+  border-radius: 8px;
+}
+.projects-cards {
+  display: flex;
+  align-items: center;
+  justify-content: unset;
+  gap: 30px;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 500px) {
+  .projects-cards {
+    justify-content: center;
+    padding: 0;
+  }
+}
+.projects-card {
+  width: 300px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+.projects-card:hover {
+  transform: translateY(-12px);
+  cursor: pointer;
+}
+.projects-title {
+  border-radius: 4px;
+  width: 162px;
+  height: 35px;
+  background: rgba(32, 207, 198, 0.08);
+  font-family: "Public Sans", sans-serif;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-size: 18px;
+  line-height: 175%;
+  text-transform: uppercase;
+  color: #008080;
+  margin-bottom: 13px;
+}
+@media (max-width: 1260px) {
+  .projects-title {
+    font-size: calc(16px + 2 * (100vw - 320px) / 940);
+  }
+}
+.projects-subtitle {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 128%;
+  color: #1e1e1e;
+  margin-bottom: 20px;
+}
+@media (max-width: 1260px) {
+  .projects-subtitle {
+    font-size: calc(37px + 3 * (100vw - 320px) / 940);
+  }
+}
+.projects-items {
+  background-color: rgb(38, 63, 96);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-radius: 0 0 8px 8px;
+}
+.projects-name {
+  color: #fff;
+  font-family: "Inter", sans-serif;
 }
 
 .contact {
