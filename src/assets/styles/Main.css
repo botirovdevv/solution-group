@@ -234,7 +234,7 @@ body.scroll {
 @media screen and (max-width: 957px) {
   .header {
     padding-top: 130px;
-    height: 100vh;
+    height: 50vh;
   }
 }
 .header-content {
