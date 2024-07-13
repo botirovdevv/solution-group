@@ -1,8 +1,18 @@
 .service {
     padding-top: 100px;
 
+    &-img {
+        @media screen and (max-width: 1275px) {
+            display: none;
+        }
+    }
+
     &-card {
-        @include flex(center, space-between)
+        @include flex(center, space-between);
+
+        @media screen and (max-width: 1275px) {
+            padding-top: 50px;
+        }
     }
 
     &-card_title {
@@ -17,6 +27,10 @@
         font-size: 16px;
         text-transform: uppercase;
         color: #008080;
+        @media screen and (max-width: 620px) {
+            width: 100%;
+        }
+
     }
 
     &-title {
@@ -27,6 +41,10 @@
         line-height: 128%;
         color: #1e1e1e;
         padding: 14px 0;
+        @media screen and (max-width: 620px) {
+            width: 100%;
+            text-align: center;
+        }
     }
 
     &-card_subtitle {
@@ -38,6 +56,9 @@
         width: 550px;
         text-align: justify;
         padding-bottom: 34px;
+        @media screen and (max-width: 620px) {
+            width: 100%;
+        }
     }
 
     &-link {
@@ -53,7 +74,7 @@
         padding: 8px;
         transition: all 0.2s ease-in-out;
 
-        &:hover{
+        &:hover {
             background-color: #d5dddd;
         }
     }
