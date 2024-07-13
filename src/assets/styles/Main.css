@@ -308,4 +308,63 @@ body.scroll {
   .header-img {
     display: none;
   }
+}
+
+.service {
+  padding-top: 100px;
+}
+.service-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.service-card_title {
+  border-radius: 4px;
+  width: 186px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  padding: 0 5px;
+  background: rgba(32, 207, 198, 0.08);
+  font-family: "Public Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #008080;
+}
+.service-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  width: 600px;
+  line-height: 128%;
+  color: #1e1e1e;
+  padding: 14px 0;
+}
+.service-card_subtitle {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 175%;
+  color: #575757;
+  width: 550px;
+  text-align: justify;
+  padding-bottom: 34px;
+}
+.service-link {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 147%;
+  color: #1e1e1e;
+  border: 2px solid #d5dddd;
+  border-radius: 4px;
+  width: 239px;
+  height: 76px;
+  padding: 8px;
+  transition: all 0.2s ease-in-out;
+}
+.service-link:hover {
+  background-color: #d5dddd;
 }/*# sourceMappingURL=Main.css.map */
