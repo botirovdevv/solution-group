@@ -62,7 +62,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #aaaaaa;
+  background-color: rgb(38, 63, 96);
   border-radius: 10px;
 }
 
@@ -234,7 +234,7 @@ body.scroll {
 @media screen and (max-width: 957px) {
   .header {
     padding-top: 130px;
-    height: 50vh;
+    height: 80vh;
   }
 }
 .header-content {
@@ -275,6 +275,19 @@ body.scroll {
     width: 100%;
   }
 }
+.header-link {
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  background-color: rgb(38, 63, 96);
+  letter-spacing: 0.6px;
+  color: #fff;
+  padding: 13px 22px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+.header-link:hover {
+  opacity: 0.9;
+}
 .header-separate {
   color: #008080;
 }
@@ -285,6 +298,8 @@ body.scroll {
   width: 480px;
   line-height: 171%;
   color: #575757;
+  margin-bottom: 20px;
+  margin-top: 12px;
 }
 @media (max-width: 1260px) {
   .header-subtitle {
@@ -483,4 +498,79 @@ body.scroll {
 .contact {
   border-radius: 35px 8px;
   padding-top: 130px;
+}
+
+.about {
+  padding-top: 50px;
+}
+.about-cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+@media screen and (max-width: 1240px) {
+  .about-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1240px) {
+  .about-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+.about .about-icon {
+  display: inline-block;
+  width: 88px;
+  height: 88px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about .about-icon svg {
+  width: 50px;
+  height: 46px;
+}
+.about-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  font-size: 26px;
+  line-height: 128%;
+  color: #1e1e1e;
+  padding: 12px 0;
+}
+@media (max-width: 1260px) {
+  .about-title {
+    font-size: calc(22px + 4 * (100vw - 320px) / 940);
+  }
+}
+.about-subtitle {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 175%;
+  color: #575757;
+  width: 380px;
+}
+@media (max-width: 1260px) {
+  .about-subtitle {
+    font-size: calc(15px + 3 * (100vw - 320px) / 940);
+  }
+}
+@media screen and (max-width: 1240px) {
+  .about-subtitle {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 420px) {
+  .about-subtitle {
+    width: 100%;
+  }
 }/*# sourceMappingURL=Main.css.map */

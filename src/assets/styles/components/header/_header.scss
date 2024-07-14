@@ -1,8 +1,7 @@
 .header{
     @media screen and (max-width: 957px){
         padding-top: 130px; 
-        height: 50vh;
-        
+        height: 80vh;
     }
 
     &-content{
@@ -33,6 +32,20 @@
         }
     }
 
+    &-link{
+        font-family: $second-family;
+        font-size: 17px;
+        background-color: rgb(38, 63, 96);
+        letter-spacing: 0.60px;
+        color: #fff;
+        padding: 13px 22px;
+        border-radius: 4px;
+        transition: all 0.2s ease-in-out;
+        &:hover{
+            opacity: 0.9;
+        }
+    }
+
     &-separate{
         color: #008080;
     }
@@ -44,6 +57,8 @@
         width: 480px;
         line-height: 171%;
         color: #575757;
+        margin-bottom: 20px;
+        margin-top: 12px;
 
         @media screen and (max-width: 527px){
             width: 100%;

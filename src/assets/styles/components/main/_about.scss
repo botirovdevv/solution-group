@@ -1,0 +1,64 @@
+.about {
+    padding-top: 50px;
+
+    &-cards{
+        @include flex(center, space-between);
+        gap: 10px;
+
+        @media screen and (max-width: 1240px){
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &-card{
+        @media screen and (max-width: 1240px){
+            @include flex(center, center);
+            flex-direction: column;
+        }
+    }
+    
+    .about-icon {
+        display: inline-block;
+        width: 88px; 
+        height: 88px; 
+        background-color: #f0f0f0;
+        border-radius: 50%; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .about-icon svg {
+        width: 50px; 
+        height: 46px; 
+    }
+
+    &-title {
+        font-family: $second-family;
+        font-weight: 700;
+        font-size: 26px;
+        @include adaptive-value('font-size', 26, 22);
+        line-height: 128%;
+        color: #1e1e1e;
+        padding: 12px 0;
+    }
+
+    &-subtitle {
+        font-family: $second-family;
+        font-weight: 500;
+        @include adaptive-value('font-size', 18, 15);
+        line-height: 175%;
+        color: #575757;
+        width: 380px;
+        @media screen and (max-width: 1240px){
+            text-align: center;
+        }
+
+        @media screen and (max-width: 420px){
+            width: 100%;
+        }
+
+
+    }
+}
