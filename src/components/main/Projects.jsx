@@ -1,11 +1,31 @@
-import React from 'react'
-import img from '../../assets/images/projects.jpg'
+import React, { useEffect } from 'react'
 import { FaArrowRightLong } from "react-icons/fa6";
 import { projects } from '../../data/projectsData';
+import ScrollReveal from 'scrollreveal';
 
 const Projects = () => {
+
+  const sr = ScrollReveal();
+  useEffect(() => {
+
+    sr.reveal('.projects-card', {
+      duration: 1800,
+      origin: 'bottom',
+      distance: '100px',
+      delay: 200,
+      easing: 'cubic-bezier(0.5, 0, 0, 1)',
+    });
+
+    sr.reveal('.service-img', {
+      duration: 1200,
+      origin: 'bottom',
+      distance: '50px',
+      delay: 200,
+      easing: 'cubic-bezier(0.5, 0, 0, 1)',
+    });
+  }, [])
   return (
-    <section className='projects'>
+    <section className='projects' id="projects">
       <div className="container">
         <div className="projects-content">
           <h2 className="projects-title">

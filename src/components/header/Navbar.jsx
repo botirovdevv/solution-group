@@ -26,9 +26,9 @@ const Navbar = () => {
 
                     <ul className={isOpen ? "nav-links show" : "nav-links"}>
                         <a href='#' className="nav-link">Bosh sahifa</a>
-                        <a href="#" className="nav-link">Xizmatlar</a>
+                        <a href="#service" className="nav-link">Xizmatlar</a>
                         <a href="#" className="nav-link">Mijozlar</a>
-                        <a href="#" className="nav-link">Loyihalar</a>
+                        <a href="#projects" className="nav-link">Loyihalar</a>
                         <a href="#" className="nav-link">Hamkorlik</a>
                         <button className="nav-close_btn" onClick={closeMenu}>
                             <IoClose />

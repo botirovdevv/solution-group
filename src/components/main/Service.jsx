@@ -1,10 +1,30 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import img from '../../assets/images/service.png'
 import { serviceData } from '../../data/serviceData'
+import ScrollReveal from 'scrollreveal';
 
 const Service = () => {
+    const sr = ScrollReveal();
+    useEffect(() => {
+
+        sr.reveal('.serivice-items', {
+            duration: 1000,
+            origin: 'left',
+            distance: '50px',
+            delay: 200,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+        });
+
+        sr.reveal('.service-img', {
+            duration: 1200,
+            origin: 'bottom',
+            distance: '50px',
+            delay: 200,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+        });
+    }, [])
     return (
-        <section className="service">
+        <section className="service" id="service">
             <div className="container">
                 <div className="service-content">
                     {

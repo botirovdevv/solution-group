@@ -1,7 +1,36 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import img from '../../assets/images/header-img.png'
+import ScrollReveal from 'scrollreveal';
 
 const Header = () => {
+    const sr = ScrollReveal();
+    useEffect(() => {
+
+        sr.reveal('.header-title', {
+            duration: 1000,
+            origin: 'bottom',
+            distance: '50px',
+            delay: 200,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+        });
+
+        sr.reveal('.header-subtitle', {
+            duration: 1200,
+            origin: 'bottom',
+            distance: '50px',
+            delay: 200,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+        });
+
+        sr.reveal('.header-img', {
+            duration: 1200,
+            origin: 'top',
+            distance: '50px',
+            delay: 200,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+        });
+
+    }, [])
     return (
         <header className='header'>
             <div className="container">

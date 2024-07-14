@@ -1,8 +1,36 @@
-import React from 'react'
-
+import React, { useEffect } from 'react'
+import ScrollReveal from 'scrollreveal';
 const About = () => {
+    const sr = ScrollReveal();
+    useEffect(() => {
+
+        sr.reveal('.about-title', {
+            duration: 1000,
+            origin: 'bottom',
+            distance: '50px',
+            delay: 200,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+        });
+
+        sr.reveal('.about-subtitle', {
+            duration: 1200,
+            origin: 'bottom',
+            distance: '50px',
+            delay: 200,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+        });
+
+        sr.reveal('.about-icon', {
+            duration: 1200,
+            origin: 'bottom',
+            distance: '50px',
+            delay: 200,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+        });
+
+    }, [])
     return (
-        <section className="about">
+        <section className="about" id='about'>
             <div className="container">
                 <div className="about-content">
                     <div className="about-cards">
@@ -34,7 +62,7 @@ const About = () => {
                             </span>
                             <h1 className="about-title">Mukammal Yechimlar</h1>
                             <p className="about-subtitle">
-                                Biz har bir mijozga alohida yondashgan holda siz uchun xafsiz, mukammal va zamonaviy bo'lgan raqamli yechimlarni taklif qilamiz 
+                                Biz har bir mijozga alohida yondashgan holda siz uchun xafsiz, mukammal va zamonaviy bo'lgan raqamli yechimlarni taklif qilamiz
                             </p>
                         </div>
 
