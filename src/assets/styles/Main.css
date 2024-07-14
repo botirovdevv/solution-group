@@ -773,4 +773,12 @@ body.scroll {
   .about-subtitle {
     width: 100%;
   }
+}
+
+.loader {
+  background-color: #fff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=Main.css.map */
