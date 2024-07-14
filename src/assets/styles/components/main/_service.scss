@@ -9,6 +9,7 @@
 
     &-card {
         @include flex(center, space-between);
+        padding-bottom: 50px;
 
         @media screen and (max-width: 1275px) {
             padding-top: 50px;
