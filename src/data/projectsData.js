@@ -8,12 +8,4 @@ export const projects = [
         link: "https://xorazmvbsks.uz"
     },
 
-    {
-        id: 2,
-        img: img,
-        name: 'xorazmvbsks.uz',
-        link: "https://xorazmvbsks.uz"
-    },
-
-    
 ]

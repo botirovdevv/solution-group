@@ -43,7 +43,7 @@ const About = () => {
                             </span>
                             <h1 className="about-title">Kuchli xodimlar</h1>
                             <p className="about-subtitle">
-                                Bizning jamoada kamida 2 yillik tajribaga ega dasturchilar o'z faoliyatini yuritadi va sizning loyihangiz kuchli mutaxasislar tomonidan ishlab chiqiladi
+                                Bizning jamoada kamida 2 yillik tajribaga ega dasturchilar o'z faoliyatini yuritadi va sizning loyihangiz kuchli mutaxassislar tomonidan ishlab chiqiladi
                             </p>
                         </div>
                         <div className="about-card">
@@ -62,7 +62,7 @@ const About = () => {
                             </span>
                             <h1 className="about-title">Mukammal Yechimlar</h1>
                             <p className="about-subtitle">
-                                Biz har bir mijozga alohida yondashgan holda siz uchun xafsiz, mukammal va zamonaviy bo'lgan raqamli yechimlarni taklif qilamiz
+                                Biz har bir mijozga alohida yondashgan holda siz uchun xavfsiz, mukammal va zamonaviy bo'lgan raqamli yechimlarni taklif qilamiz
                             </p>
                         </div>
 
@@ -84,7 +84,7 @@ const About = () => {
                             </span>
                             <h1 className="about-title">Doimiy Mijozlar</h1>
                             <p className="about-subtitle">
-                                Biz bilan hamkorlik qilgan mijozlar albatta bizning doimiy mijozimiz bo'lib qoladi va hohlagan vaqtda bizga aloqaga chiqishlari mumkin
+                                Biz bilan hamkorlik qilgan mijozlar albatta bizning doimiy mijozimiz bo'lib qoladi va xohlagan vaqtda bizga aloqaga chiqishlari mumkin
                             </p>
                         </div>
                     </div>
