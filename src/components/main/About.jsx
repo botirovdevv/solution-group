@@ -18,7 +18,6 @@ const About = () => {
                                 Bizning jamoada kamida 2 yillik tajribaga ega dasturchilar o'z faoliyatini yuritadi va sizning loyihangiz kuchli mutaxasislar tomonidan ishlab chiqiladi
                             </p>
                         </div>
-
                         <div className="about-card">
                             <span className="about-icon">
                                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
