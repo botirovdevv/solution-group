@@ -42,7 +42,7 @@ const Header = () => {
                         <p className="header-subtitle">
                             Biz berayotgan raqamli yechimlar orqali biznesingizni keyingi bosqichga olib chiqing
                         </p>
-                        <a href="#" className='header-link'>Loyihani Boshlash</a>
+                        <a href="#contact" className='header-link'>Loyihani Boshlash</a>
                     </div>
                     <div className="header-image">
                         <img src={img} className='header-img' alt="Solution Group Chart Photo" />

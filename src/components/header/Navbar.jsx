@@ -25,10 +25,10 @@ const Navbar = () => {
                     </a>
 
                     <ul className={isOpen ? "nav-links show" : "nav-links"}>
-                        <a href='/' className="nav-link">Bosh sahifa</a>
-                        <a href="#service" className="nav-link">Xizmatlar</a>
-                        <a href="#projects" className="nav-link">Loyihalar</a>
-                        <a href="#" className="nav-link">Hamkorlar</a>
+                        <a href='/' className="nav-link" onClick={closeMenu}>Bosh sahifa</a>
+                        <a href="#service" className="nav-link" onClick={closeMenu}>Xizmatlar</a>
+                        <a href="#projects" className="nav-link" onClick={closeMenu}>Loyihalar</a>
+                        <a href="#" className="nav-link" onClick={closeMenu}>Hamkorlar</a>
                         <button className="nav-close_btn" onClick={closeMenu}>
                             <IoClose />
                         </button>
@@ -36,9 +36,9 @@ const Navbar = () => {
 
                     <div className="nav-items">
 
-                        <button className="nav-btn">
+                        <a href='#contact' className="nav-btn">
                             Hozir Boshlash
-                        </button>
+                        </a>
 
                         <button className="nav-menu_btn" onClick={openMenu}>
                             <RiMenu3Fill />
