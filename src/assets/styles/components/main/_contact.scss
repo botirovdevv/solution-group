@@ -83,6 +83,7 @@
         @include flex(center, unset);
         gap: 8px;
         margin-top: 50px;
+        padding-bottom: 20px;
 
         @media screen and (max-width: 680px){
             flex-direction: column;
@@ -138,5 +139,20 @@
             text-align: center;
         }
 
+    }
+
+   
+    
+
+    &-error{
+        font-family: $font-family;
+        font-size: 16px;
+        font-weight: 600;
+        color: rgb(255, 88, 88);
+        margin-top: 20px;
+
+        &.show{
+            color: green;
+        }
     }
 }

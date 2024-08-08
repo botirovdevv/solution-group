@@ -3,12 +3,8 @@
     height: 84px;
     @include flex(center, center);
 
-    &-logo{
-        font-family: $font-family;
-        font-size: 25px;
-        font-weight: 800;
-        color: rgb(38, 63, 96);
-        letter-spacing: 0.67px
+    &-logo_img{
+        width: 200px
     }
 
     &-content {
@@ -72,7 +68,7 @@
     &-link {
         font-family: $font-family;
         font-weight: 600;
-        font-size: 16px;
+        font-size: 17px;
         line-height: 150%;
         text-align: center;
         color: $gray-500;

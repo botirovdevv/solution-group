@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { FaShoppingCart } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { RiMenu3Fill } from "react-icons/ri";
+import logo from '../../assets/images/logo.png'
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -21,7 +21,7 @@ const Navbar = () => {
             <div className="container">
                 <div className="nav-content">
                     <a href="/" className="nav-logo">
-                        SOLUTION
+                        <img src={logo} className='nav-logo_img' alt="" />
                     </a>
 
                     <ul className={isOpen ? "nav-links show" : "nav-links"}>

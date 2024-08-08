@@ -2,7 +2,8 @@
     padding-bottom: 50px;
 
     &-img {
-        width: 40px;
+        width: 100px;
+        object-fit: cover;
         @media screen and (max-width: 734px){
             display: none;
         }

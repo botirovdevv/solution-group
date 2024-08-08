@@ -3,31 +3,60 @@ import img from '../../assets/images/contact.png';
 import axios from 'axios';
 
 const Contact = () => {
-  const [phoneNumber, setPhoneNumber] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('+998');
+  const [error, setError] = useState('');
+  const [show, setShow] = useState(false);
+
+  const clearErrorAfterTimeout = () => {
+    setTimeout(() => {
+      setError('');
+    }, 3000); 
+  };
 
   const handlePhoneNumberChange = (e) => {
     const inputPhoneNumber = e.target.value;
-    if (/^[0-9]*$/.test(inputPhoneNumber)) {
-      setPhoneNumber(inputPhoneNumber);
+    if (/^\+998[0-9]*$/.test(inputPhoneNumber)) {
+      if (inputPhoneNumber.length <= 13) {
+        setPhoneNumber(inputPhoneNumber);
+        setError('');
+      } else {
+        setError('Telefon raqami 13 tadan ortiq bo\'lmasligi kerak.');
+        clearErrorAfterTimeout();
+        setShow(false)
+      }
+    } else {
+
+      setError('Telefon raqami +998 bilan boshlanishi kerak va faqat raqamlarni o\'z ichiga olishi kerak.');
+      clearErrorAfterTimeout();
+      setShow(false)
+
     }
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
+    if (phoneNumber.length !== 13) {
+      setError('Telefon raqami 13 ta raqamdan iborat bo\'lishi kerak.');
+      clearErrorAfterTimeout();
+      return;
+    }
     try {
       const response = await axios.post('https://api.telegram.org/bot7088426255:AAG33gYdzXSmu09nwyu1FmIIHCyOOX4ON4Y/sendMessage', {
         chat_id: '5663095517',
         text: `Yangi telefon raqam: ${phoneNumber}`,
       });
       console.log('Telegramga yuborildi:', response.data);
-      setPhoneNumber('')
+      setPhoneNumber('+998');
+      setError("Raqamingiz muvaffaqiyatli yuborilda tez orada siz bilan bog'lanamiz");
+      clearErrorAfterTimeout();
+      setShow(true)
     } catch (error) {
       console.error('Telegramga yuborishda xatolik yuz berdi:', error);
     }
   };
 
   return (
-    <section className="contact">
+    <section className="contact" id='contact'>
       <div className="container">
         <div className="contact-content">
           <div className="contact-items">
@@ -42,19 +71,14 @@ const Contact = () => {
               <input
                 value={phoneNumber}
                 onChange={handlePhoneNumberChange}
-                type="number"
+                type="text"
                 className='contact-input'
                 placeholder='Telefon raqamingiz'
-                maxLength={12}
-                minLength={12}
-                onInput={(e) => {
-                  if (e.target.value.length > e.target.maxLength) {
-                    e.target.value = e.target.value.slice(0, e.target.maxLength);
-                  }
-                }}
+                maxLength={13}
               />
               <button type='submit' className='contact-btn'>Yuborish</button>
             </form>
+            <span className={show ? 'contact-error show' : "contact-error"}>{error}</span>
             <p className="contact-subtitle">
               Bizga telefon raqamingizni qoldiring va biz siz bilan bog'lanamiz
             </p>

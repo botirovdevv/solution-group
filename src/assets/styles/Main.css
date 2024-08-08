@@ -83,12 +83,8 @@ body.scroll {
   align-items: center;
   justify-content: center;
 }
-.nav-logo {
-  font-family: "Public Sans", sans-serif;
-  font-size: 25px;
-  font-weight: 800;
-  color: rgb(38, 63, 96);
-  letter-spacing: 0.67px;
+.nav-logo_img {
+  width: 200px;
 }
 .nav-content {
   display: flex;
@@ -153,7 +149,7 @@ body.scroll {
 .nav-link {
   font-family: "Public Sans", sans-serif;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 150%;
   text-align: center;
   color: #6d737a;
@@ -330,7 +326,9 @@ body.scroll {
   padding-bottom: 50px;
 }
 .footer-img {
-  width: 40px;
+  width: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media screen and (max-width: 734px) {
   .footer-img {
@@ -499,7 +497,7 @@ body.scroll {
   border-radius: 4px;
   width: 162px;
   height: 35px;
-  background: rgba(32, 207, 198, 0.08);
+  background: rgb(38, 63, 96);
   font-family: "Public Sans", sans-serif;
   font-weight: 600;
   display: flex;
@@ -509,7 +507,7 @@ body.scroll {
   font-size: 18px;
   line-height: 175%;
   text-transform: uppercase;
-  color: #008080;
+  color: #fff;
   margin-bottom: 13px;
 }
 @media (max-width: 1260px) {
@@ -643,6 +641,7 @@ body.scroll {
   justify-content: unset;
   gap: 8px;
   margin-top: 50px;
+  padding-bottom: 20px;
 }
 @media screen and (max-width: 680px) {
   .contact-inputs {
@@ -698,6 +697,20 @@ body.scroll {
   .contact-subtitle {
     text-align: center;
   }
+}
+.contact-test {
+  width: 350px;
+  height: 350px;
+}
+.contact-error {
+  font-family: "Public Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(255, 88, 88);
+  margin-top: 20px;
+}
+.contact-error.show {
+  color: green;
 }
 
 .about {

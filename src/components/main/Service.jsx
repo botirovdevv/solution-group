@@ -1,79 +1,72 @@
-import React, { useEffect } from 'react'
-import img from '../../assets/images/service.png'
-import { serviceData } from '../../data/serviceData'
-import ScrollReveal from 'scrollreveal';
+import React from 'react'
+import img1 from '../../assets/images/row-1-column-1.png'
+import img2 from '../../assets/images/row-1-column-2.png'
+import img3 from '../../assets/images/row-1-column-3.png'
+import img4 from '../../assets/images/row-2-column-1.png'
+import img5 from '../../assets/images/row-2-column-2.png'
+import img6 from '../../assets/images/row-2-column-3.png'
+import img7 from '../../assets/images/row-3-column-1.png'
+import img8 from '../../assets/images/row-3-column-2.png'
+import img9 from '../../assets/images/row-3-column-3.png'
+import { FaReact } from "react-icons/fa";
+import { GiStrong } from "react-icons/gi";
+import { AiOutlineSolution } from "react-icons/ai";
+import { MdOutlineArrowOutward } from "react-icons/md";
+
 
 const Service = () => {
-    const sr = ScrollReveal();
-    useEffect(() => {
-
-        sr.reveal('.serivice-items', {
-            duration: 1000,
-            origin: 'left',
-            distance: '50px',
-            delay: 200,
-            easing: 'cubic-bezier(0.5, 0, 0, 1)',
-        });
-
-        sr.reveal('.service-img', {
-            duration: 1200,
-            origin: 'bottom',
-            distance: '50px',
-            delay: 200,
-            easing: 'cubic-bezier(0.5, 0, 0, 1)',
-        });
-    }, [])
     return (
-        <section className="service" id="service">
+        <section className='service'>
             <div className="container">
                 <div className="service-content">
-                    {
-                        serviceData.map((item, index) => (
-                            <div className="service-card" key={item.id}>
-                                {index === 0 ? (
-                                    <div className="serivice-items">
-                                        <h1 className="service-card_title">
-                                            {item.title}
-                                        </h1>
-                                        <h1 className="service-title">
-                                            {item.cardTitle}
-                                        </h1>
-                                        <p className="service-card_subtitle" >
-                                            {item.subtitle}
-                                        </p>
-                                        <a href="#" className="service-link">
-                                            Foydalanish
-                                        </a>
-                                    </div>
-                                ) : (
-                                    <div className="service-image">
-                                        <img src={item.img} className='service-img' alt="serivce image" />
-                                    </div>
-                                )}
-                                {index === 0 ? (
-                                    <div className="service-image">
-                                        <img src={item.img} className='service-img' alt="serivce image" />
-                                    </div>
-                                ) : (
-                                    <div className="serivice-items">
-                                        <h1 className="service-card_title">
-                                            {item.title}
-                                        </h1>
-                                        <h1 className="service-title">
-                                            {item.cardTitle}
-                                        </h1>
-                                        <p className="service-card_subtitle" >
-                                            {item.subtitle}
-                                        </p>
-                                        <a href="#" className="service-link">
-                                            Foydalanish
-                                        </a>
-                                    </div>
-                                )}
-                            </div>
-                        ))
-                    }
+                    <div className='service-images'>
+                        <div className="service-images_group">
+                            <img src={img1} className='service-img' alt="" />
+                            <img src={img2} className='service-img' alt="" />
+                            <img src={img3} className='service-img' alt="" />
+                        </div>
+                        <div className="service-images_group">
+                            <img src={img4} className='service-img' alt="" />
+                            <img src={img5} className='service-img' alt="" />
+                            <img src={img6} className='service-img' alt="" />
+                        </div>
+                        <div className="service-images_group">
+                            <img src={img7} className='service-img' alt="" />
+                            <img src={img8} className='service-img' alt="" />
+                            <img src={img9} className='service-img' alt="" />
 
+                        </div>
+                    </div>
+                    <div className="service-texts">
+                        <h1 className='service-title'>BIZ TAQDIM QILAYOGAN TAKLIFLAR</h1>
+                        <p className="service-subtitle">Web saytlar, Internet do'konlar, Yangilik saytlar, Korporativ saytlar, Dizayn, Logo, Ijtimoiy tarmoqlar uchun post dizayni</p>
+
+                        <a href="#contact" className='service-link'>Loyihani boshlash <MdOutlineArrowOutward color='#fff' fontSize={28} /></a>
+
+                        <div className="service-items">
+                            <div className="service-item">
+                                <FaReact fontSize={45} color='#008080' />
+                                <h1 className="service-item_title">
+                                    Zamonaviy texnologiyalar
+                                </h1>
+                            </div>
+
+                            <div className="service-item">
+                                <GiStrong fontSize={45} color='#008080' />
+                                <h1 className="service-item_title">
+                                    Kuchli xodimlar
+                                </h1>
+                            </div>
+
+                            <div className="service-item">
+                                <AiOutlineSolution fontSize={45} color='#008080' />
+
+                                <h1 className="service-item_title">
+                                    Mukammmal yechimlar
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
