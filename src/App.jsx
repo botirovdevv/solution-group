@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from './components/header/Navbar'
-import Header from './components/header/Header'
-import Service from './components/main/Service'
-import Projects from './components/main/Projects'
-import Contact from './components/main/Contact'
-import About from './components/main/About'
-import Footer from './components/footer/Footer'
 import { PulseLoader } from 'react-spinners'
+import { Route, Routes } from 'react-router-dom'
+import { routes } from './helpers/routes'
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -26,12 +22,11 @@ const App = () => {
         ) : (
           <div className="wrapper">
             <Navbar />
-            <Header />
-            <About />
-            <Service />
-            <Projects />
-            <Contact />
-            <Footer />
+            <Routes>
+              {routes.map((item) => (
+                <Route path={item.path} element={item.element} key={item.path} />
+              ))}
+            </Routes>
           </div>
         )
       }
