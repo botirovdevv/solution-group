@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react'
 import img from '../../assets/images/header-img.png'
 import ScrollReveal from 'scrollreveal';
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
+    const { t } = useTranslation();
     const sr = ScrollReveal();
     useEffect(() => {
 
@@ -37,12 +39,13 @@ const Header = () => {
                 <div className="header-content">
                     <div className="header-texts">
                         <h1 className="header-title">
-                            <span className='header-separate'>Raqamli</span> yechimlar taklif qilamiz    
+                            {t('headerTitle')}
                         </h1>
-                        <p className="header-subtitle">
-                            Biz berayotgan raqamli yechimlar orqali biznesingizni keyingi bosqichga olib chiqing
-                        </p>
-                        <a href="#contact" className='header-link'>Loyihani Boshlash</a>
+                            <p className="header-subtitle">
+                                {t('headerSubtitle')}
+                            </p>
+                                
+                        <a href="#contact" className='header-link'>{t('headerBtn')}</a>
                     </div>
                     <div className="header-image">
                         <img src={img} className='header-img' alt="Solution Group Chart Photo" />

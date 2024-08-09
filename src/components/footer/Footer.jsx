@@ -2,9 +2,10 @@ import React from 'react'
 import logo from '../../assets/images/logo2.png'
 import { FaTelegram } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-
-
+import { useTranslation } from 'react-i18next';
 const Footer = () => {
+  const { t } = useTranslation();
+
     return (
         <footer className="footer">
             <div className="container">
@@ -13,7 +14,7 @@ const Footer = () => {
                         <img src={logo} className='footer-img' alt="Web site logo" />
                     </div>
                     <div>
-                        <h1 className='footer-title'>Solution jamoasi haqida va yangi loyihalar haqida ko'proq ma'lumotga ega bo'lmoqchi bo'lsangiz bizni ijtimoiy tarmoqlarga obuna bo'ling</h1>
+                        <h1 className='footer-title'>{t('footer')}</h1>
                     </div>
 
                     <div className="footer-links">

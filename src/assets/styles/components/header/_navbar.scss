@@ -22,7 +22,7 @@
             align-items: start;
             padding-left: 50px;
             justify-content: center;
-            background-color:rgb(25, 25, 25);
+            background-color:#fff;
             top: 0;
             width: 500px;
             left: 0;
@@ -79,7 +79,7 @@
         }
 
         @media screen and (max-width: 800px){
-            color: $nd-primary-100;
+            color: #000;
             font-size: 24px;
             letter-spacing: 0.78px;
         }
@@ -121,12 +121,22 @@
         @media screen and (max-width: 800px){
             display: block;
             position: absolute;
-            top: 24px;
-            color: #fff;
+            top: 34px;
+            color: #000;
             border: none;
             right: 30px;
-            font-size: 28px;
+            font-size: 30px;
             background-color: transparent;
+        }
+    }
+
+    &-logo_mobile{
+        display: none;
+        @media screen and (max-width: 800px){
+            display: block;
+            position: absolute;
+            top: 0;
+            border: none;
         }
     }
 
@@ -138,6 +148,7 @@
             border: none;
             font-size: 28px;
             background-color: transparent;
+            padding-top: 8px;
         }
     }
 

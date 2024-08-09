@@ -2,8 +2,10 @@ import React, { useEffect } from 'react'
 import { FaArrowRightLong } from "react-icons/fa6";
 import { projects } from '../../data/projectsData';
 import ScrollReveal from 'scrollreveal';
+import { useTranslation } from 'react-i18next';
 
 const Projects = () => {
+  const { t } = useTranslation();
 
   const sr = ScrollReveal();
   useEffect(() => {
@@ -29,9 +31,9 @@ const Projects = () => {
       <div className="container">
         <div className="projects-content">
           <h2 className="projects-title">
-            Loyihalar
+            {t('projectsTitle')}
           </h2>
-          <h1 className="projects-subtitle">So'ngi loyihalar</h1>
+          <h1 className="projects-subtitle">{t('projectsTitle2')}</h1>
           <div className="projects-cards">
             {
               projects.map((item) => (

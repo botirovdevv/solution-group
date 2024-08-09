@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
+import { useTranslation } from 'react-i18next';
 import ScrollReveal from 'scrollreveal';
 const About = () => {
+    const { t } = useTranslation();
     const sr = ScrollReveal();
     useEffect(() => {
 
@@ -41,9 +43,9 @@ const About = () => {
 
                                 </svg>
                             </span>
-                            <h1 className="about-title">Kuchli xodimlar</h1>
+                            <h1 className="about-title">{t('infoTitle1')}</h1>
                             <p className="about-subtitle">
-                                Bizning jamoada kamida 2 yillik tajribaga ega dasturchilar o'z faoliyatini yuritadi va sizning loyihangiz kuchli mutaxassislar tomonidan ishlab chiqiladi
+                                {t('infoSubtitle1')}
                             </p>
                         </div>
                         <div className="about-card">
@@ -60,9 +62,10 @@ const About = () => {
                                     </defs>
                                 </svg>
                             </span>
-                            <h1 className="about-title">Mukammal Yechimlar</h1>
+                            <h1 className="about-title">{t('infoTitle2')}</h1>
                             <p className="about-subtitle">
-                                Biz har bir mijozga alohida yondashgan holda siz uchun xavfsiz, mukammal va zamonaviy bo'lgan raqamli yechimlarni taklif qilamiz
+                                {t('infoSubtitle2')}
+
                             </p>
                         </div>
 
@@ -82,9 +85,10 @@ const About = () => {
                                     </defs>
                                 </svg>
                             </span>
-                            <h1 className="about-title">Doimiy Mijozlar</h1>
+                            <h1 className="about-title">{t('infoTitle3')}</h1>
                             <p className="about-subtitle">
-                                Biz bilan hamkorlik qilgan mijozlar albatta bizning doimiy mijozimiz bo'lib qoladi va xohlagan vaqtda bizga aloqaga chiqishlari mumkin
+                                {t('infoSubtitle3')}
+
                             </p>
                         </div>
                     </div>

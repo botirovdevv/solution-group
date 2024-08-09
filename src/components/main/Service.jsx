@@ -12,11 +12,14 @@ import { FaReact } from "react-icons/fa";
 import { GiStrong } from "react-icons/gi";
 import { AiOutlineSolution } from "react-icons/ai";
 import { MdOutlineArrowOutward } from "react-icons/md";
+import { useTranslation } from 'react-i18next'
 
 
 const Service = () => {
+    const { t } = useTranslation();
+
     return (
-        <section className='service'>
+        <section className='service' id='service'>
             <div className="container">
                 <div className="service-content">
                     <div className='service-images'>
@@ -38,23 +41,23 @@ const Service = () => {
                         </div>
                     </div>
                     <div className="service-texts">
-                        <h1 className='service-title'>BIZ TAQDIM QILAYOGAN TAKLIFLAR</h1>
-                        <p className="service-subtitle">Web saytlar, Internet do'konlar, Yangilik saytlar, Korporativ saytlar, Dizayn, Logo, Ijtimoiy tarmoqlar uchun post dizayni</p>
+                        <h1 className='service-title'>{t('serviceTitle')}</h1>
+                        <p className="service-subtitle">{t('serviceSubtitle')}</p>
 
-                        <a href="#contact" className='service-link'>Loyihani boshlash <MdOutlineArrowOutward color='#fff' fontSize={28} /></a>
+                        <a href="#contact" className='service-link'>{t('headerBtn')} <MdOutlineArrowOutward color='#fff' fontSize={28} /></a>
 
                         <div className="service-items">
                             <div className="service-item">
                                 <FaReact fontSize={45} color='#008080' />
                                 <h1 className="service-item_title">
-                                    Zamonaviy texnologiyalar
+                                    {t('serviceItemTitle1')}
                                 </h1>
                             </div>
 
                             <div className="service-item">
                                 <GiStrong fontSize={45} color='#008080' />
                                 <h1 className="service-item_title">
-                                    Kuchli xodimlar
+                                    {t('serviceItemTitle2')}
                                 </h1>
                             </div>
 
@@ -62,7 +65,7 @@ const Service = () => {
                                 <AiOutlineSolution fontSize={45} color='#008080' />
 
                                 <h1 className="service-item_title">
-                                    Mukammmal yechimlar
+                                    {t('serviceItemTitle3')}
                                 </h1>
                             </div>
                         </div>

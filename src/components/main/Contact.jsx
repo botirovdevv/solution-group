@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import img from '../../assets/images/contact.png';
 import axios from 'axios';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
   const [phoneNumber, setPhoneNumber] = useState('+998');
   const [error, setError] = useState('');
   const [show, setShow] = useState(false);
+  const { t } = useTranslation();
 
   const clearErrorAfterTimeout = () => {
     setTimeout(() => {
       setError('');
-    }, 3000); 
+    }, 3000);
   };
 
   const handlePhoneNumberChange = (e) => {
@@ -61,11 +63,11 @@ const Contact = () => {
         <div className="contact-content">
           <div className="contact-items">
             <div className="contact-title_items">
-              <h3 className="contact-title">Hozir boshlang</h3>
+              <h3 className="contact-title">{t('contact')}</h3>
               <div className='contact-title_line'></div>
             </div>
             <h1 className="contact-main_title">
-              Biz bilan hamkorlikni hozir boshlang
+              {t('contactTitle')}
             </h1>
             <form onSubmit={handleSubmit} className="contact-inputs">
               <input
@@ -76,11 +78,11 @@ const Contact = () => {
                 placeholder='Telefon raqamingiz'
                 maxLength={13}
               />
-              <button type='submit' className='contact-btn'>Yuborish</button>
+              <button type='submit' className='contact-btn'>{t('send')}</button>
             </form>
             <span className={show ? 'contact-error show' : "contact-error"}>{error}</span>
             <p className="contact-subtitle">
-              Bizga telefon raqamingizni qoldiring va biz siz bilan bog'lanamiz
+              {t('connect')}
             </p>
           </div>
           <div className="contact-image">
