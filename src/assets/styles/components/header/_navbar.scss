@@ -16,7 +16,7 @@
         @include flex(center, unset);
         gap: 24px;
         
-        @media screen and (max-width: 800px){
+        @media screen and (max-width: 935px){
             position: fixed;
             flex-direction: column;
             align-items: start;
@@ -44,7 +44,7 @@
     }
 
     &-bg{
-        @media screen and (max-width: 800px){
+        @media screen and (max-width: 935px){
             position: fixed;
             background-color: #0000009c;
             top: 0;
@@ -78,7 +78,7 @@
             color: rgb(38, 63, 96);
         }
 
-        @media screen and (max-width: 800px){
+        @media screen and (max-width: 935px){
             color: #000;
             font-size: 24px;
             letter-spacing: 0.78px;
@@ -118,7 +118,7 @@
 
     &-close_btn{
         display: none;
-        @media screen and (max-width: 800px){
+        @media screen and (max-width: 935px){
             display: block;
             position: absolute;
             top: 34px;
@@ -132,7 +132,7 @@
 
     &-logo_mobile{
         display: none;
-        @media screen and (max-width: 800px){
+        @media screen and (max-width: 935px){
             display: block;
             position: absolute;
             top: 0;
@@ -142,7 +142,7 @@
 
     &-menu_btn{
         display: none;
-        @media screen and (max-width: 800px){
+        @media screen and (max-width: 935px){
             display: block;
             color: #000;
             border: none;

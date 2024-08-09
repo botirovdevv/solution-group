@@ -1,20 +1,21 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector'; // to'g'ri import qilinganligiga ishonch hosil qiling
-import Backend from 'i18next-http-backend';
+import Uz from '../language/Uz.json';
+import En from '../language/En.json';
+import Ru from '../language/Ru.json';
 
 i18n
-  .use(Backend)
-  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: 'en',
-    debug: true,
+    resources: {    
+      uz: { translation: Uz },
+      en: { translation: En },
+      ru: { translation: Ru },
+    },
+    lng: 'uz', // default til
+    fallbackLng: 'uz', // fallback til
     interpolation: {
       escapeValue: false,
-    },
-    backend: {
-      loadPath: '/locales/{{lng}}/translation.json',
     },
   });
 
