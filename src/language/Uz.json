@@ -24,5 +24,7 @@
     "contactTitle": "Biz bilan hamkorlikni hozir boshlang",
     "send": "Yuborish",
     "connect": "Bizga telefon raqamingizni qoldiring va biz siz bilan bog'lanamiz",
-    "footer": "Solution jamoasi haqida va yangi loyihalar haqida ko'proq ma'lumotga ega bo'lmoqchi bo'lsangiz bizni ijtimoiy tarmoqlarga obuna bo'ling"
+    "footer": "Solution jamoasi haqida va yangi loyihalar haqida ko'proq ma'lumotga ega bo'lmoqchi bo'lsangiz bizni ijtimoiy tarmoqlarga obuna bo'ling",
+    "notFound": "Bunday sahifa topilmadi",
+    "btn": "Bosh sahifaga qaytish" 
 }
