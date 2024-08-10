@@ -51,7 +51,7 @@ const Navbar = () => {
                         <a href="/" className="nav-link" onClick={closeMenu}>{t('link1')}</a>
                         <a href="#service" className="nav-link" onClick={closeMenu}>{t('link2')}</a>
                         <a href="#projects" className="nav-link" onClick={closeMenu}>{t('link3')}</a>
-                        <a href="#" className="nav-link" onClick={closeMenu}>{t('link4')}</a>
+                        <a href="#partners" className="nav-link" onClick={closeMenu}>{t('link4')}</a>
                         <button className="nav-close_btn" onClick={closeMenu}>
                             <IoClose />
                         </button>

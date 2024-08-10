@@ -946,4 +946,28 @@ body.scroll {
   .not-found_link {
     font-size: calc(16px + 2 * (100vw - 320px) / 940);
   }
+}
+
+.partners {
+  padding-top: 120px;
+}
+.partners-title {
+  font-family: "Public Sans", sans-serif;
+  font-size: 34px;
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+.partners-img {
+  width: 220px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 20px;
+  border: 1px solid rgb(167, 167, 167);
+  border-radius: 6px;
+  filter: grayscale(100%);
+  transition: all 0.2s ease-in-out;
+}
+.partners-img:hover {
+  filter: grayscale(0);
 }/*# sourceMappingURL=Main.css.map */
