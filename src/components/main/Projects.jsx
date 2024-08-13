@@ -3,9 +3,23 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { projects } from '../../data/projectsData';
 import ScrollReveal from 'scrollreveal';
 import { useTranslation } from 'react-i18next';
+import { useProjects } from '../../context/ProjectsContex';
 
 const Projects = () => {
   const { t } = useTranslation();
+  const { projects, getAllProjects, deleteProject, loading, error } = useProjects();
+
+  useEffect(() => {
+    getAllProjects();
+  }, []);
+
+  const handleDelete = async (projectId) => {
+    try {
+      await deleteProject(projectId);
+    } catch (error) {
+      console.error('Error deleting project:', error);
+    }
+  };
 
   const sr = ScrollReveal();
   useEffect(() => {
@@ -38,9 +52,9 @@ const Projects = () => {
             {
               projects.map((item) => (
                 <div className="projects-card" key={item.id}>
-                  <img src={item.img} className='projects-img' alt="" />
+                  <img src={item.image} className='projects-img' alt="" />
                   <a href={item.link} className="projects-items">
-                    <h1 className='projects-name'>{item.name}</h1>
+                    <h1 className='projects-name'>{item.link}</h1>
                     <FaArrowRightLong color='#fff' fontSize={20} />
                   </a>
                 </div>
