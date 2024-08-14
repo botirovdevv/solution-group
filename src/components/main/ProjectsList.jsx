@@ -1,36 +1,52 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useProjects } from '../../context/ProjectsContex';
+import { Paper, List, ListItem, ListItemText, IconButton, Typography } from '@mui/material';
+import { Delete, Edit } from '@mui/icons-material';
+import EditProject from './EditProject';
 
 const ProjectsList = () => {
     const { projects, getAllProjects, deleteProject, loading, error } = useProjects();
+    const [editingProject, setEditingProject] = useState(null);
 
     useEffect(() => {
-        getAllProjects(); 
+        getAllProjects();
     }, []);
 
+        console.log('Projects:', projects);
+
     const handleDelete = async (projectId) => {
-        try {
-            await deleteProject(projectId);
-        } catch (error) {
-            console.error('Error deleting project:', error);
-        }
+        await deleteProject(projectId);
+    };
+
+    const handleEdit = (project) => {
+        setEditingProject(project);
     };
 
     return (
-        <div>
-            <h2>Projects List</h2>
+        <Paper elevation={3} sx={{ padding: 2 }}>
+            <Typography variant="h6">Projects List</Typography>
             {loading && <p>Loading...</p>}
             {error && <p>Error: {error.message}</p>}
-            <ul>
+            <List>
                 {projects.map((project) => (
-                    <li key={project.id}>
-                        {project.link && <a href={project.link}>{project.link}</a>}
-                        {project.image && <img src={project.image} alt="Project" style={{ width: '100px', height: '100px' }} />}
-                        <button onClick={() => handleDelete(project.id)}>Delete</button>
-                    </li>
+                    <ListItem key={project.id} sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                        <ListItemText
+                            primary={typeof project.link === 'string' ? project.link : 'No Link'}
+                            secondary={typeof project.image === 'string' ? <img src={project.image} alt="Project" style={{ width: '100px', height: '100px' }} /> : 'No Image'}
+                        />
+                        <div>
+                            <IconButton onClick={() => handleEdit(project)}>
+                                <Edit />
+                            </IconButton>
+                            <IconButton onClick={() => handleDelete(project.id)}>
+                                <Delete />
+                            </IconButton>
+                        </div>
+                    </ListItem>
                 ))}
-            </ul>
-        </div>
+            </List>
+            {editingProject && <EditProject project={editingProject} />}
+        </Paper>
     );
 };
 

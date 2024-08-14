@@ -12,24 +12,30 @@ export const ProjectsProvider = ({ children }) => {
     const [error, setError] = useState(null);
     const [success, setSuccess] = useState(false);
 
+    const clearError = () => setError(null);
+    const clearSuccess = () => setSuccess(false);
+
     const getAllProjects = async () => {
         setLoading(true);
         try {
             const response = await api.get('/projects');
+            console.log('Projects:', response.data);  // Bu yerda ma'lumotlar yuklanayotganligini tekshiring
             setProjects(response.data);
+            setLoading(false);  // Ma'lumot muvaffaqiyatli yuklanganidan keyin loading'ni false ga o'zgartiring
         } catch (error) {
             setError(error);
-        } finally {
-            setLoading(false);
+            setLoading(false);  // Xatolik yuz berganda loading'ni false ga o'zgartiring
         }
     };
 
     const createProject = async (link, image) => {
         setLoading(true);
+        clearError();
+        clearSuccess();
         try {
             await projectsApi.createProject({ link, image });
             setSuccess(true);
-            getAllProjects();  // Loyiha qo'shilgandan keyin hamma loyihalarni qayta yuklash
+            await getAllProjects();  // Loyiha qo'shilgandan keyin hamma loyihalarni qayta yuklash
         } catch (error) {
             setError(error);
         } finally {
@@ -39,9 +45,25 @@ export const ProjectsProvider = ({ children }) => {
 
     const deleteProject = async (projectId) => {
         setLoading(true);
+        clearError();
         try {
             await projectsApi.deleteProject(projectId);
-            getAllProjects();  // Loyiha o'chirilgandan keyin hamma loyihalarni qayta yuklash
+            await getAllProjects();
+        } catch (error) {
+            setError(error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const updateProject = async (id, link, image) => {
+        setLoading(true);
+        clearError();
+        clearSuccess();
+        try {
+            await projectsApi.updateProject(id, { link, image });
+            setSuccess(true);
+            await getAllProjects();
         } catch (error) {
             setError(error);
         } finally {
@@ -54,7 +76,18 @@ export const ProjectsProvider = ({ children }) => {
     }, []);
 
     return (
-        <ProjectsContext.Provider value={{ projects, loading, error, success, createProject, getAllProjects, deleteProject }}>
+        <ProjectsContext.Provider value={{
+            projects,
+            loading,
+            error,
+            success,
+            createProject,
+            getAllProjects,
+            deleteProject,
+            updateProject,
+            clearError,
+            clearSuccess
+        }}>
             {children}
         </ProjectsContext.Provider>
     );

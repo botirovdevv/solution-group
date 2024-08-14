@@ -589,6 +589,7 @@ body.scroll {
 .projects-img {
   width: 100%;
   border-radius: 8px;
+  padding: 20px;
 }
 .projects-cards {
   display: flex;
@@ -970,4 +971,19 @@ body.scroll {
 }
 .partners-img:hover {
   filter: grayscale(0);
+}
+
+.admin-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.admin-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: unset;
+}
+.admin-upload {
+  margin-top: 50px;
 }/*# sourceMappingURL=Main.css.map */

@@ -3,33 +3,14 @@
         @include flex(center, center);
         height: 100vh;
         flex-direction: column;
-        gap: 16px;
     }
 
-    &-title{
-        font-family: $font-family;
-        font-size: 23px;
+    &-buttons{
+        @include flex(center, unset)
     }
 
-    &-input{
-        padding: 14px 15px;
-        outline: none;
-        font-size: 18px;
-        width: 350px;
-        border-radius: 6px;
-        border: 1px solid #ccc;
-    }
+    // &-upload{
+    //     margin-top: 50px;
+    // }
 
-    &-btn{
-        padding: 12px 50px;
-        font-size: 16px;
-        border: 1px solid #000;
-        border-radius: 4px;
-        transition: all 0.2s ease-in-out;
-
-        &:hover{
-            background-color: #000;
-            color: #ccc;
-        }
-    }
 }

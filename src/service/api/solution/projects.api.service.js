@@ -29,6 +29,16 @@ const projectsApi = {
             console.error(error);
             throw error;
         }
+    },
+
+    updateProject: async (id, data) => {
+        try {
+            const response = await api.put(`/projects/${id}`, data);
+            return response;
+        } catch (error) {
+            console.log(error);
+            return error;
+        }
     }
 };
 
