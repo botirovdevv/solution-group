@@ -43,6 +43,7 @@
     &-images_group {
         @include flex(center, center);
         gap: 6px;
+        border-radius: 6px;
         @media screen and (max-width: 900px){
             width: 100%;
         }
@@ -51,6 +52,7 @@
     &-images {
         @include flex(center, center);
         flex-direction: column;
+        border-radius: 6px;
         gap: 6px;
         @media screen and (max-width: 900px){
             width: 100%;

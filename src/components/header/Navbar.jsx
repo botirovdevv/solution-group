@@ -93,6 +93,7 @@ const Navbar = () => {
                                 MenuListProps={{
                                     'aria-labelledby': 'language-button',
                                 }}
+                                sx={{zIndex: 9999999999}}
                             >
                                 <MenuItem onClick={() => changeLanguage('uz')}>O'zbek</MenuItem>
                                 <MenuItem onClick={() => changeLanguage('en')}>English</MenuItem>
