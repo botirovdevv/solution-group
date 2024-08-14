@@ -949,41 +949,15 @@ body.scroll {
   }
 }
 
-.partners {
-  padding-top: 120px;
-}
-.partners-title {
-  font-family: "Public Sans", sans-serif;
-  font-size: 34px;
-  text-align: center;
-  font-weight: 600;
-  padding-bottom: 20px;
-}
-.partners-img {
-  width: 220px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  padding: 20px;
-  border: 1px solid rgb(167, 167, 167);
-  border-radius: 6px;
-  filter: grayscale(100%);
-  transition: all 0.2s ease-in-out;
-}
-.partners-img:hover {
-  filter: grayscale(0);
-}
-
 .admin-items {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  flex-direction: column;
 }
 .admin-buttons {
   display: flex;
   align-items: center;
   justify-content: unset;
-}
-.admin-upload {
-  margin-top: 50px;
 }/*# sourceMappingURL=Main.css.map */
