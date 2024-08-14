@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { IoClose } from "react-icons/io5";
 import { RiMenu3Fill } from "react-icons/ri";
 import logo from '../../assets/images/logo.png';
@@ -11,6 +11,23 @@ const Navbar = () => {
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
     const { t, i18n } = useTranslation();
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+      const handleScroll = () => {
+        if (window.scrollY > 50) {
+          setScrolled(true);
+        } else {
+          setScrolled(false);
+        }
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
 
     const openMenu = () => {
         setIsOpen(true);
@@ -36,7 +53,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className='nav'>
+        <nav className={`nav ${scrolled ? 'scrolled' : ''}`}>
             <div className={isOpen ? "nav-bg show" : "nav-bg"} onClick={closeMenu}></div>
             <div className="container">
                 <div className="nav-content">

@@ -34,7 +34,7 @@
         border-radius: 4px;
         width: 162px;
         height: 35px;
-        background: $second-color;
+        background: rgb(86, 166, 235);
         font-family: $font-family;
         font-weight: 600;
         @include flex(center, center);
@@ -57,7 +57,7 @@
     }
 
     &-items {
-        background-color: rgb(38, 63, 96);
+        background-color: rgb(1 160 218 );
         height: 60px;
         @include flex(center, space-between);
         padding: 0 20px;

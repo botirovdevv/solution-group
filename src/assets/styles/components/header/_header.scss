@@ -1,7 +1,7 @@
 .header{
     @media screen and (max-width: 957px){
-        padding-top: 130px; 
-        height: 80vh;
+        padding-top: 100px;
+        padding-bottom: 50px;
     }
 
     &-content{
@@ -35,7 +35,7 @@
     &-link{
         font-family: $second-family;
         font-size: 17px;
-        background-color: rgb(38, 63, 96);
+        background-color: #01A0DA;
         letter-spacing: 0.60px;
         color: #fff;
         padding: 13px 22px;

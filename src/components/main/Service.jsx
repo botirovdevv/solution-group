@@ -48,21 +48,21 @@ const Service = () => {
 
                         <div className="service-items">
                             <div className="service-item">
-                                <FaReact fontSize={45} color='#008080' />
+                                <FaReact fontSize={45} color='#01A0DA' />
                                 <h1 className="service-item_title">
                                     {t('serviceItemTitle1')}
                                 </h1>
                             </div>
 
                             <div className="service-item">
-                                <GiStrong fontSize={45} color='#008080' />
+                                <GiStrong fontSize={45} color='#01A0DA' />
                                 <h1 className="service-item_title">
                                     {t('serviceItemTitle2')}
                                 </h1>
                             </div>
 
                             <div className="service-item">
-                                <AiOutlineSolution fontSize={45} color='#008080' />
+                                <AiOutlineSolution fontSize={45} color='#01A0DA' />
 
                                 <h1 className="service-item_title">
                                     {t('serviceItemTitle3')}

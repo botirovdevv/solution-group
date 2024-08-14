@@ -108,7 +108,7 @@
         font-family: $font-family;
         font-size: 18px;
         @include adaptive-value('font-size', 18, 15);
-        background-color: $second-color;
+        background-color: #01A0DA;
         color: #fff;
         padding: 12px 25px;
         border-radius: 6px;
@@ -151,7 +151,7 @@
         transition: all 0.2s ease-in-out;
 
         &:hover {
-            background-color: #008080;
+            background-color: #01A0DA;
 
             & h1 {
                 color: #fff;
