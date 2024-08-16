@@ -4,42 +4,38 @@ import axios from 'axios';
 import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
-  const [phoneNumber, setPhoneNumber] = useState('+998');
-  const [error, setError] = useState('');
-  const [show, setShow] = useState(false);
   const { t } = useTranslation();
 
-  const clearErrorAfterTimeout = () => {
-    setTimeout(() => {
-      setError('');
-    }, 3000);
-  };
+  const [phoneNumber, setPhoneNumber] = useState('+998 ');
 
-  const handlePhoneNumberChange = (e) => {
-    const inputPhoneNumber = e.target.value;
-    if (/^\+998[0-9]*$/.test(inputPhoneNumber)) {
-      if (inputPhoneNumber.length <= 13) {
-        setPhoneNumber(inputPhoneNumber);
-        setError('');
-      } else {
-        setError('Telefon raqami 13 tadan ortiq bo\'lmasligi kerak.');
-        clearErrorAfterTimeout();
-        setShow(false)
-      }
-    } else {
+ 
 
-      setError('Telefon raqami +998 bilan boshlanishi kerak va faqat raqamlarni o\'z ichiga olishi kerak.');
-      clearErrorAfterTimeout();
-      setShow(false)
+  const handleInputChange = (e) => {
+    let input = e.target.value.replace(/\D/g, '').substring(3); // faqat raqamlarni olish va "998" ni olib tashlash
+    let formattedNumber = '+998 ';
 
+    switch (true) {
+      case input.length <= 2:
+        formattedNumber += `(${input})`;
+        break;
+      case input.length <= 5:
+        formattedNumber += `(${input.slice(0, 2)}) ${input.slice(2)}`;
+        break;
+      case input.length <= 7:
+        formattedNumber += `(${input.slice(0, 2)}) ${input.slice(2, 5)} ${input.slice(5)}`;
+        break;
+      default:
+        formattedNumber += `(${input.slice(0, 2)}) ${input.slice(2, 5)} ${input.slice(5, 7)} ${input.slice(7)}`;
+        break;
     }
+
+    setPhoneNumber(formattedNumber);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (phoneNumber.length !== 13) {
-      setError('Telefon raqami 13 ta raqamdan iborat bo\'lishi kerak.');
-      clearErrorAfterTimeout();
+    if (phoneNumber.length !== 19) {
+      setError('Telefon raqami to\'liq formatda kiritilishi kerak.');
       return;
     }
     try {
@@ -47,11 +43,8 @@ const Contact = () => {
         chat_id: '5663095517',
         text: `Yangi telefon raqam: ${phoneNumber}`,
       });
-      console.log('Telegramga yuborildi:', response.data);
-      setPhoneNumber('+998');
-      setError("Raqamingiz muvaffaqiyatli yuborilda tez orada siz bilan bog'lanamiz");
-      clearErrorAfterTimeout();
-      setShow(true)
+      console.log('Telegramga yuborildi');
+      setPhoneNumber('')
     } catch (error) {
       console.error('Telegramga yuborishda xatolik yuz berdi:', error);
     }
@@ -72,21 +65,20 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="contact-inputs">
               <input
                 value={phoneNumber}
-                onChange={handlePhoneNumberChange}
+                onChange={handleInputChange}
                 type="text"
                 className='contact-input'
                 placeholder='Telefon raqamingiz'
-                maxLength={13}
+                maxLength={19}
               />
               <button type='submit' className='contact-btn'>{t('send')}</button>
             </form>
-            <span className={show ? 'contact-error show' : "contact-error"}>{error}</span>
             <p className="contact-subtitle">
               {t('connect')}
             </p>
           </div>
           <div className="contact-image">
-            <img src={img} className='contact-img' alt="" />
+            <img src={img} className='contact-img' alt="contact" />
           </div>
         </div>
       </div>
