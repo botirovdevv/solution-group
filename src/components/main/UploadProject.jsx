@@ -11,15 +11,10 @@ const UploadProject = () => {
     const [link, setLink] = useState('');
 
     const handleImageChange = (e) => {
-        const selectedFile = e.target.files[0];
-        if (selectedFile && selectedFile.type === 'image/png') {
-            let reader = new FileReader();
-            reader.readAsDataURL(selectedFile);
-            reader.onload = () => setFile(reader.result);
-            reader.onerror = (error) => console.error("Faylni o'qishda xatolik:", error);
-        } else {
-            console.error("Faqat PNG formatidagi fayllar qabul qilinadi.");
-        }
+        let reader = new FileReader();
+        reader.readAsDataURL(e.target.files[0]);
+        reader.onload = () => setFile(reader.result);
+        reader.onerror = (error) => console.log(error);
     };
 
     const handleLinkChange = (e) => setLink(e.target.value);
@@ -27,13 +22,7 @@ const UploadProject = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (file && link) {
-            try {
-                await createProject(link, file);
-            } catch (error) {
-                console.error("Loyihani yuklashda xatolik yuz berdi:", error);
-            }
-        } else {
-            console.error("Iltimos, loyihaning havolasi va rasmni tanlang.");
+            await createProject(link, file);
         }
     };
 
@@ -64,7 +53,7 @@ const UploadProject = () => {
                                 type="file"
                                 hidden
                                 onChange={handleImageChange}
-                                accept="image/png"
+                                accept="image/*"
                             />
                         </Button>
                         <Button
