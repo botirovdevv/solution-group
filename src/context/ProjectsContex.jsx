@@ -19,12 +19,12 @@ export const ProjectsProvider = ({ children }) => {
         setLoading(true);
         try {
             const response = await api.get('/projects');
-            console.log('Projects:', response.data);  // Bu yerda ma'lumotlar yuklanayotganligini tekshiring
+            console.log('Projects:', response.data);  
             setProjects(response.data);
-            setLoading(false);  // Ma'lumot muvaffaqiyatli yuklanganidan keyin loading'ni false ga o'zgartiring
+            setLoading(false);  
         } catch (error) {
             setError(error);
-            setLoading(false);  // Xatolik yuz berganda loading'ni false ga o'zgartiring
+            setLoading(false);  
         }
     };
 
@@ -35,7 +35,7 @@ export const ProjectsProvider = ({ children }) => {
         try {
             await projectsApi.createProject({ link, image });
             setSuccess(true);
-            await getAllProjects();  // Loyiha qo'shilgandan keyin hamma loyihalarni qayta yuklash
+            await getAllProjects();  
         } catch (error) {
             setError(error);
         } finally {

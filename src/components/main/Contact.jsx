@@ -8,10 +8,8 @@ const Contact = () => {
 
   const [phoneNumber, setPhoneNumber] = useState('+998 ');
 
- 
-
   const handleInputChange = (e) => {
-    let input = e.target.value.replace(/\D/g, '').substring(3); // faqat raqamlarni olish va "998" ni olib tashlash
+    let input = e.target.value.replace(/\D/g, '').substring(3); 
     let formattedNumber = '+998 ';
 
     switch (true) {
