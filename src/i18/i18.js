@@ -13,7 +13,7 @@ i18n
       ru: { translation: Ru },
     },
     lng: 'uz', // default til
-    fallbackLng: 'uz', // fallback til
+    fallbackLng: 'uz', 
     interpolation: {
       escapeValue: false,
     },

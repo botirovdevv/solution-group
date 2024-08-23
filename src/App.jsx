@@ -4,6 +4,7 @@ import { PulseLoader } from 'react-spinners';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { routes } from './helpers/routes';
 import { useProjects } from './context/ProjectsContex';
+import TestModeModal from './mui/TestModeModal';
 
 const App = () => {
   const { loading } = useProjects();
@@ -29,6 +30,7 @@ const App = () => {
               <Route path={item.path} element={item.element} key={item.path} />
             ))}
           </Routes>
+          <TestModeModal/>
         </div>
       )}
     </main>

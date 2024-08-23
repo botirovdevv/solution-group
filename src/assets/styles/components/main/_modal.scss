@@ -1,0 +1,45 @@
+.modal{
+    position: fixed;
+    bottom: 50px;
+    z-index: 9999999;
+    @include flex(center, center);
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+
+    &.show{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &-content{
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        background-color: #fff;
+        padding: 25px;
+        border-radius: 8px;
+        @include flex(center, unset);
+        gap: 12px;
+    }
+
+    &-title{
+        font-family: $second-family;
+        @include adaptive-value('font-size', 22, 18);
+        width: 300px;
+    }
+
+    &-btn{
+        font-family: $second-family;
+        border: none;
+        background-color: #01A0DA;
+        color: #fff;
+        font-size: 20px;
+        padding: 10px 20px;
+        border-radius: 6px;
+        transition: all 0.2s ease-in-out;
+
+        &:hover{
+            opacity: 0.9;
+        }
+    }
+}
