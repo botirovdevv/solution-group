@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { IoClose } from "react-icons/io5";
 import { RiMenu3Fill } from "react-icons/ri";
-import logo from '../../assets/images/logo.png';
+import logo from '../../assets/images/logo2.png';
 import { Menu, MenuItem, IconButton } from '@mui/material';
 import { useTranslation } from 'react-i18next'; 
 import { MdTranslate } from "react-icons/md";
@@ -59,6 +59,7 @@ const Navbar = () => {
                 <div className="nav-content">
                     <a href="/" className="nav-logo">
                         <img src={logo} className='nav-logo_img' alt="Logo" />
+                        <h1 className={scrolled ? 'nav-logo_title active' : "nav-logo_title"}>Solution Group</h1>
                     </a>
 
                     <ul className={isOpen ? "nav-links show" : "nav-links"}>

@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import img from '../../assets/images/header-img.png'
 import ScrollReveal from 'scrollreveal';
 import { useTranslation } from 'react-i18next';
 
@@ -24,14 +23,6 @@ const Header = () => {
             easing: 'cubic-bezier(0.5, 0, 0, 1)',
         });
 
-        sr.reveal('.header-img', {
-            duration: 1200,
-            origin: 'top',
-            distance: '50px',
-            delay: 200,
-            easing: 'cubic-bezier(0.5, 0, 0, 1)',
-        });
-
     }, [])
     return (
         <header className='header'>
@@ -46,9 +37,6 @@ const Header = () => {
                             </p>
                                 
                         <a href="#contact" className='header-link'>{t('headerBtn')}</a>
-                    </div>
-                    <div className="header-image">
-                        <img src={img} className='header-img' alt="Solution Group Chart Photo" />
                     </div>
 
                 </div>
