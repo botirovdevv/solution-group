@@ -10,7 +10,7 @@ const Admin = () => {
 
     const handleLogin = (e) => {
         e.preventDefault();
-        if (password === 'solutionadmin') {
+        if (password === 'solutionadminmustafoadmin') {
             setIsAuthenticated(true);
         } else {
             alert('Noto‘g‘ri parol');
