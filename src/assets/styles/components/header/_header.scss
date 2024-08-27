@@ -7,30 +7,32 @@
 
     &-title {
         font-family: $second-family;
-        font-weight: 600;
-        @include adaptive-value('font-size', 70, 38);
+        font-weight: 700;
+        @include adaptive-value('font-size', 75, 38);
+        letter-spacing: 0.60px;
         width: 700px;
         line-height: 115%;
         color: #fff;
         text-align: center;
         margin: 0 auto;
 
-        @media screen and (max-width: 630px) {
+        @media screen and (max-width: 740px) {
             width: 100%;
         }
     }
 
     &-link {
         @include flex(center, center);
-        width: 200px;
+        width: 210px;
         margin: 0 auto;
         font-family: $second-family;
-        font-size: 17px;
+        @include adaptive-value('font-size', 18, 15);
+
         background-color: #01A0DA;
         letter-spacing: 0.60px;
         color: #fff;
-        padding: 13px 22px;
-        border-radius: 4px;
+        padding: 16px 22px;
+        border-radius: 10px;
         transition: all 0.2s ease-in-out;
 
         &:hover {
@@ -38,15 +40,11 @@
         }
     }
 
-    &-separate {
-        color: rgb(38, 63, 96);
-    }
-
     &-subtitle {
         font-family: $second-family;
         font-weight: 500;
-        @include adaptive-value('font-size', 18, 16);
-        width: 480px;
+        @include adaptive-value('font-size', 20, 16);
+        width: 550px;
         text-align: center;
         margin: 0 auto;
         line-height: 171%;
