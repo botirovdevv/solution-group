@@ -15,19 +15,7 @@
         text-align: center;
         margin: 0 auto;
 
-        @media screen and (max-width: 1270px) {
-            width: 600px;
-        }
-
-        @media screen and (max-width: 1170px) {
-            width: 100%;
-        }
-
-        @media screen and (max-width: 957px) {
-            width: 700px;
-        }
-
-        @media screen and (max-width: 750px) {
+        @media screen and (max-width: 630px) {
             width: 100%;
         }
     }
@@ -66,9 +54,8 @@
         margin-bottom: 20px;
         margin-top: 12px;
 
-        @media screen and (max-width: 527px) {
+        @media screen and (max-width: 630px) {
             width: 100%;
-            padding-top: 7px;
         }
     }
 

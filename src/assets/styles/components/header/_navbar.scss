@@ -39,6 +39,10 @@
         }
     }
 
+    &-mobile_logo{
+        width: 200px
+    }
+
     &-content {
         @include flex(center, space-between);
         gap: 24px;

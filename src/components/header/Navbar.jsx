@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { IoClose } from "react-icons/io5";
 import { RiMenu3Fill } from "react-icons/ri";
 import logo from '../../assets/images/logo2.png';
+import logo2 from '../../assets/images/logo.png';
 import { Menu, MenuItem, IconButton } from '@mui/material';
 import { useTranslation } from 'react-i18next'; 
 import { MdTranslate } from "react-icons/md";
@@ -64,7 +65,7 @@ const Navbar = () => {
 
                     <ul className={isOpen ? "nav-links show" : "nav-links"}>
                         <a href="/" className="nav-logo_mobile" onClick={closeMenu}>
-                            <img src={logo} className='nav-logo_img' alt="Logo" />
+                            <img src={logo2} className='nav-mobile_logo' alt="Logo" />
                         </a>
                         <a href="/" className="nav-link" onClick={closeMenu}>{t('link1')}</a>
                         <a href="#service" className="nav-link" onClick={closeMenu}>{t('link2')}</a>
@@ -82,9 +83,9 @@ const Navbar = () => {
                                 aria-haspopup="true"
                                 aria-expanded={open ? 'true' : undefined}
                                 onClick={handleClick}
-                                color="inherit"
+                                color={scrolled ? '#000' : '#fff'}
                             >
-                                <MdTranslate />
+                                <MdTranslate color={scrolled ? '#000' : '#fff'}/>
                             </IconButton>
                             <Menu
                                 id="language-menu"
@@ -106,7 +107,7 @@ const Navbar = () => {
                         </a>
 
                         <button className="nav-menu_btn" onClick={openMenu}>
-                            <RiMenu3Fill />
+                            <RiMenu3Fill color={scrolled ? '#000' : '#fff'} />
                         </button>
                     </div>
                 </div>

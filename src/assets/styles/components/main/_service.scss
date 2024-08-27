@@ -15,8 +15,9 @@
 
     &-image {
         width: 550px;
-
-
+        @media screen and (max-width: 570px){
+            width: 100%;
+        }
     }
 
     &-images_group {
