@@ -1,4 +1,6 @@
 .not-found {
+    background-color: #000;
+    margin-bottom: 30px;
     &_content {
         @include flex(center, center);
         height: 100vh;
@@ -13,13 +15,15 @@
         letter-spacing: 0.78px;
         padding-bottom: 20px;
         width: 100%;
+        color: #fff;
         text-align: center;
     }
 
     &_link{
         font-family: $font-family;
         @include adaptive-value('font-size', 18, 16);
-        border: 1px dashed #000;
+        border: 1px dashed #ccc;
+        color: #fff;
         padding: 12px 24px;
         border-radius: 6px;
     }

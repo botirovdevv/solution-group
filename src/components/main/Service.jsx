@@ -5,6 +5,10 @@ import { GiStrong } from "react-icons/gi";
 import { AiOutlineSolution } from "react-icons/ai";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { useTranslation } from 'react-i18next'
+import { FaUserTie } from "react-icons/fa";
+import { FaChartLine } from "react-icons/fa";
+
+
 
 const Service = () => {
     const { t } = useTranslation();
@@ -31,14 +35,16 @@ const Service = () => {
                             </div>
 
                             <div className="service-item">
-                                <GiStrong fontSize={45} color='#01A0DA' />
+                                <FaUserTie fontSize={45} color='#01A0DA' />
+
                                 <h1 className="service-item_title">
                                     {t('serviceItemTitle2')}
                                 </h1>
                             </div>
 
                             <div className="service-item">
-                                <AiOutlineSolution fontSize={45} color='#01A0DA' />
+                                <FaChartLine fontSize={45} color='#01A0DA'/>
+
 
                                 <h1 className="service-item_title">
                                     {t('serviceItemTitle3')}
